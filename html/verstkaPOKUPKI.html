@@ -25,35 +25,14 @@
 
     <section class="filters">
       <form action="#">
-        <select name="city">
-          <option value="">Выберите город</option>
-          <option value="MOS">Москва</option>
-          <option value="KRAS">Краснодар</option>
-          <option value="NOV">Новороссийск</option>
-          <option value="DUB">Дубайск</option>
-        </select>
-        <select name="price">
-          <option value="">Цена</option>
-          <option value="0-10">До 10 000 000</option>
-          <option value="10-25">10 000 000 - 25 000 000</option>
-          <option value="25-50">25 000 000 - 50 000 000</option>
-          <option value="50+">Больше 50 000 000</option>
-        </select>
-        <select name="komnaty">
-        <option value="">Категория объекта</option>
-        <option value="house">дом</option>
-        <option value="Studia">студия</option>
-        <option value="1KOM">1 комнатная</option>
-        <option value="2KOM">2 комнатная</option>
-        <option value="3KOM">3 комнатная</option>
-        </select>
+        
       </form>
     </section>
 
     <!------------------------------------------------------------------Товары---------------------------------------------------->
  <section class="properties">
 
-      <div class="card">
+      <form class="card" action="/cart/add" method="post">
         <div class="image-slider">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2455253168-1.jpg">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2455252855-1.jpg">
@@ -64,11 +43,14 @@
           <h3>2-комн. квартира, 46 м² в ЖК «ЗИЛАРТ»</h3>
           <p class="description">Общая площадь 46 м² <br> Площадь кухни 21 м² <br> Этаж 9 из 40 <br> Год постройки 2023</p>
           <p class="price">32 580 000 ₽</p>
-          <a href="#" class="btn">Купить</a>
+           <input type="hidden" name="product_id" value="1">
+           <input type="hidden" name="tovar" value="1">
+           <input type="hidden" name="price" value="32580000">
+          <input type="submit" value="buy" />
         </div>
-      </div>
+      </form>
 
-    <div class="card">
+      <form class="card" action="/cart/add" method="post">
         <div class="image-slider">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2462914632-1.jpg">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2462914627-1.jpg">
@@ -79,11 +61,13 @@
           <h3>1-комн. квартира, 35,7 м² в ЖК «ЗИЛАРТ»</h3>
           <p class="description">Общая площадь 35,7 м² <br> Площадь кухни 10 м² <br> Этаж 10 из 15 <br> Год постройки 2023</p>
           <p class="price">19 200 000 ₽</p>
-          <a href="#" class="btn">Купить</a>
+           <input type="hidden" name="product_id" value="2">
+           <input type="hidden" name="price" value="19200000">
+          <input type="submit" value="buy" />
         </div>
-      </div>
+       </form>
 
-    <div class="card">
+      <form class="card" action="/cart/add" method="post">
         <div class="image-slider">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2468937889-1.jpg">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2468932898-1.jpg">
@@ -94,9 +78,11 @@
           <h3>1-комн. квартира, 40,49 м² в ЖК «ЗИЛАРТ»</h3>
           <p class="description">Общая площадь 40,49 м² <br> Площадь кухни 20 м² <br> Этаж 6 из 40 <br> Год постройки 2023</p>
           <p class="price">21 500 000 ₽</p>
-          <a href="#" class="btn">Купить</a>
+           <input type="hidden" name="product_id" value="3">
+           <input type="hidden" name="price" value="21500000">
+          <input type="submit" value="buy" />
         </div>
-      </div>
+       </form>
 
     <div class="card">
         <div class="image-slider">
