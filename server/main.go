@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"gg/server/models"
 	"strconv"
@@ -18,7 +19,7 @@ func main() {
 		panic("failed to connect database")
 	}
 
-	db.AutoMigrate(&models.User{}, &models.Cart{}, &models.Forum{})
+	db.AutoMigrate(&models.User{}, &models.Cart{}, &models.Forum{}, &models.Product{})
 
 	r := gin.Default()
 
@@ -104,17 +105,20 @@ func main() {
 	})
 
 	r.POST("/cart/add", func(c *gin.Context) {
-		login, Error := c.Cookie("login")
-		if Error != nil {
-			c.Redirect(302, "/Regist")
+		login, err := c.Cookie("login")
+		if err != nil {
+			c.Redirect(302, "/regist")
+			return
 		}
-		password, Error := c.Cookie("password")
-		if Error != nil {
-			c.Redirect(302, "/Regist")
+		password, err := c.Cookie("password")
+		if err != nil {
+			c.Redirect(302, "/regist")
+			return
 		}
 		var user models.User
-		if err := db.Where("login = ? and password = ?", login, password).First(&user); err != nil {
-			c.Redirect(302, "/Regist")
+		if err := db.Where("login = ? and password = ?", login, password).First(&user).Error; err != nil {
+			c.String(500, fmt.Sprintf("Не удалось создать корзину: %v", err))
+			return
 		}
 
 		tovar := c.PostForm("tovar")
@@ -126,10 +130,15 @@ func main() {
 		}
 
 		var cart models.Cart
-		if err := db.Where("UserID = ?", user.ID).First(&cart).Error; err != nil {
-			cart := models.Cart{UserID: user.ID}
-			if err := db.Create(&cart).Error; err != nil {
-				c.String(500, fmt.Sprintf("Не удалось создать корзину: %v", err))
+		if err := db.Where("user_id = ?", user.ID).First(&cart).Error; err != nil {
+			if errors.Is(err, gorm.ErrRecordNotFound) {
+				cart := models.Cart{UserID: user.ID}
+				if err := db.Create(&cart).Error; err != nil {
+					c.String(500, fmt.Sprintf("Не удалось создать корзину: %v", err))
+					return
+				}
+			} else {
+				c.String(500, fmt.Sprintf("Ошибка базы данных: %v", err))
 				return
 			}
 		}
@@ -138,7 +147,18 @@ func main() {
 			c.String(501, fmt.Sprintf("Не удалось добавить товар: %v", err))
 			return
 		}
-	})
 
+		var totalPrice float64
+		if err := db.Model(&models.Product{}).Where("cart_id = ?", cart.ID).Select("SUM(price)").Scan(&totalPrice).Error; err != nil {
+			c.String(500, fmt.Sprintf("Не удалось пересчитать стоимость корзины: %v", err))
+			return
+		}
+		cart.Value = totalPrice
+		if err := db.Save(&cart).Error; err != nil {
+			c.String(500, fmt.Sprintf("Не удалось обновить корзину: %v", err))
+			return
+		}
+		c.String(200, "Товар успешно добавлен в корзину")
+	})
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
