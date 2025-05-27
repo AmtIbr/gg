@@ -50,6 +50,16 @@ func main() {
 			"message": "pong",
 		})
 	})
+	r.GET("/cart", func(c *gin.Context) {
+		c.HTML(200, "cart.html", gin.H{
+			"message": "pong",
+		})
+	})
+	r.GET("/forum", func(c *gin.Context) {
+		c.HTML(200, "forum.html", gin.H{
+			"message": "pong",
+		})
+	})
 
 	// r.POST("/test", func(c *gin.Context) {
 	// 	login := c.PostForm("login")

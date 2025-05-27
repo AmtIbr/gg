@@ -1,0 +1,50 @@
+
+<html>
+<head>
+
+    <title>Форум</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body class="ForumBody">
+    <h1 class="TextForum">Форум</h1>
+
+    <main class="Forums">
+        <!-- Блок сообщений -->
+        <section id="messages" class="ForumMessages">
+            <h2>Сообщения</h2>
+
+            <article class="ForuMessage">
+                <h3>Пользователь 1</h3>
+                <p>Сообщение 1</p>
+            </article>
+
+            <article class="ForuMessage">
+                <h3>Пользователь 2</h3>
+                <p>Сообщение 2</p>
+            </article>
+        </section>
+
+        <!-- Форма отправки нового сообщения -->
+        <form id="postForm" action="" method="post" class="ForumForm">
+            <label for="username">Имя</label>
+            <input type="text"
+                   id="username"
+                   name="username"
+                   placeholder="Введите имя"
+                   autocomplete="off"
+                   required />
+
+            <label for="message">Сообщение</label>
+            <textarea id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Введите текст сообщения"
+                      required></textarea>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </main>
+</body>
+</html>
