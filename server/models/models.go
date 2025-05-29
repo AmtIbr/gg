@@ -30,4 +30,5 @@ type Forum struct {
 	Login   string
 	Title   string
 	Content string
+	Theme   string
 }

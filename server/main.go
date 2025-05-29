@@ -35,12 +35,12 @@ func main() {
 	r.GET("/regist", htmlService.Registration)
 	r.GET("/catalog", htmlService.Catalog)
 	r.GET("/cart", htmlService.Cart)
-	r.GET("/forum", htmlService.Forum)
+	r.GET("/forum/:theme", htmlService.Forum)
 
 	r.POST("/test", userService.Registration)
 	r.POST("/login", userService.Login)
 	r.POST("/cart/add", cartService.Add)
-	r.POST("/forum", forumService.AddPost)
+	r.POST("/forum/:theme", forumService.AddPost)
 
 	r.Run()
 }

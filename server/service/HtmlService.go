@@ -25,14 +25,28 @@ func (h HtmlService) Catalog(c *gin.Context) {
 }
 
 func (s HtmlService) Forum(c *gin.Context) {
+	theme := c.Param("theme")
+
+	allowedThemes := map[string]bool{
+		"product-quality": true,
+		"offers":          true,
+		"complaints":      true,
+	}
+
+	if !allowedThemes[theme] {
+		c.String(404, "Тема форума не найдена")
+		return
+	}
+
 	var posts []models.Forum
-	if err := s.DB.Order("created_at DESC").Find(&posts).Error; err != nil {
+	if err := s.DB.Order("created_at DESC").Where("theme = ?", theme).Find(&posts).Error; err != nil {
 		c.String(500, "Не удалось загрузить посты форума")
 		return
 	}
 
 	c.HTML(200, "forum.html", gin.H{
 		"Posts": posts,
+		"Theme": theme,
 	})
 }
 
