@@ -19,10 +19,10 @@ type Cart struct {
 
 type Product struct {
 	gorm.Model
-	CartID      uint // внешний ключ
-	Cart        Cart `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // optional: поведение FK
-	Tovar       string
-	Price       float64
+	CartID uint // внешний ключ
+	Cart   Cart `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // optional: поведение FK
+	Tovar  string
+	Price  float64
 }
 
 type Forum struct {
