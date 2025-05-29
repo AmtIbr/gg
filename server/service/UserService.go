@@ -50,3 +50,13 @@ func (u UserService) Login(c *gin.Context) {
 
 	c.Redirect(302, "/catalog")
 }
+
+func (u UserService) Agreement(c *gin.Context) {
+	login := c.PostForm("login")
+	password := c.PostForm("password")
+	name := c.PostForm("name")
+
+	redirectURL := fmt.Sprintf("/agreement?login=%s&password=%s&name=%s", login, password, name)
+
+	c.Redirect(302, redirectURL)
+}

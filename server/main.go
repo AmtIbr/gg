@@ -36,11 +36,13 @@ func main() {
 	r.GET("/catalog", htmlService.Catalog)
 	r.GET("/cart", htmlService.Cart)
 	r.GET("/forum/:theme", htmlService.Forum)
+	r.GET("/agreement", htmlService.Agreement)
 
 	r.POST("/test", userService.Registration)
 	r.POST("/login", userService.Login)
 	r.POST("/cart/add", cartService.Add)
 	r.POST("/forum/:theme", forumService.AddPost)
+	r.POST("/agreement", userService.Agreement)
 
 	r.Run()
 }

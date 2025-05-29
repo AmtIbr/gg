@@ -20,6 +20,23 @@ func (h HtmlService) Registration(c *gin.Context) {
 	c.HTML(200, "registration.html", gin.H{})
 }
 
+func (h HtmlService) Agreement(c *gin.Context) {
+	login := c.Query("login")
+	password := c.Query("password")
+	name := c.Query("name")
+
+	if login == "" || password == "" {
+		c.String(400, "Заполните все поля")
+		return
+	}
+
+	c.HTML(200, "agreement.html", gin.H{
+		"login":    login,
+		"password": password,
+		"name":     name,
+	})
+}
+
 func (h HtmlService) Catalog(c *gin.Context) {
 	c.HTML(200, "catalog.html", gin.H{})
 }

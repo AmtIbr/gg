@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Согласие</title>
+		<link rel="stylesheet" href="/static/css/style.css" />
+	</head>
+
+	<body >
+		<h1 >Согласие </h1>
+        <p>Текст согласия</p>
+
+		<form action="/test" method="POST">
+			 <input type="hidden" name="login" value={{.login}}>
+            <input type="hidden" name="name" value={{.name}}> 
+            <input type="hidden" name="password" value={{.password}}>
+			<input type="hidden" name="check" id="checkbox" value="on">
+            <input type="submit" value="Send agreement" />
+        </form>
+
+	</body>
+</html>
