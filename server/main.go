@@ -41,7 +41,7 @@ func main() {
 	r.POST("/test", userService.Registration)
 	r.POST("/login", userService.Login)
 	r.POST("/cart/add", cartService.Add)
-	r.POST("/forum/:theme", forumService.AddPost)
+	r.POST("/forum", forumService.AddPost)
 	r.POST("/agreement", userService.Agreement)
 
 	r.Run()

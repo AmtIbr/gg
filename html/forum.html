@@ -5,7 +5,7 @@
 	</head>
 
 	<body class="ForumBody">
-		<h1 class="TextForum">Форум {{ .Theme }}</h1>
+		<h1 class="TextForum">Форум</h1>
 
 		<main class="Forums">
 			<!-- Блок сообщений -->
@@ -26,6 +26,7 @@
 			<!-- Форма отправки нового сообщения -->
 			<form id="postForm" action="/forum" method="post" class="ForumForm">
 				<label for="username">Имя</label>
+				<input type="hidden" name="theme" value="{{ .Theme }}" />
 				<input
 					type="text"
 					id="username"

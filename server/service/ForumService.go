@@ -14,10 +14,11 @@ type ForumService struct {
 func (f ForumService) AddPost(c *gin.Context) {
 	login := c.PostForm("username")
 	content := c.PostForm("message")
+	theme := c.PostForm("theme")
 
 	forum := models.Forum{
 		Login:   login,
-		Title:   "заголовок",
+		Theme:   theme,
 		Content: content,
 	}
 
@@ -26,5 +27,5 @@ func (f ForumService) AddPost(c *gin.Context) {
 		return
 	}
 
-	c.Redirect(302, "/forum")
+	c.Redirect(302, "/forum/"+theme)
 }
