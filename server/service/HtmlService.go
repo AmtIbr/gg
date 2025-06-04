@@ -16,6 +16,7 @@ func (h HtmlService) Login(c *gin.Context) {
 	c.HTML(200, "login.html", gin.H{})
 }
 
+
 func (h HtmlService) Registration(c *gin.Context) {
 	c.HTML(200, "registration.html", gin.H{})
 }
@@ -34,6 +35,7 @@ func (h HtmlService) Agreement(c *gin.Context) {
 		"login":    login,
 		"password": password,
 		"name":     name,
+	// Заход на страницу. Пропихиваем данные на агримент.html
 	})
 }
 
@@ -43,6 +45,7 @@ func (h HtmlService) Catalog(c *gin.Context) {
 
 func (s HtmlService) Forum(c *gin.Context) {
 	theme := c.Param("theme")
+	// Парам - это то, что после форум внутри строки
 
 	allowedThemes := map[string]bool{
 		"product-quality": true,
@@ -57,6 +60,7 @@ func (s HtmlService) Forum(c *gin.Context) {
 
 	var posts []models.Forum
 	if err := s.DB.Order("created_at DESC").Where("theme = ?", theme).Find(&posts).Error; err != nil {
+	// Ордер - сортировка, креатед ат по времени создания сообщения
 		c.String(500, "Не удалось загрузить посты форума")
 		return
 	}

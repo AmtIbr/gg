@@ -14,6 +14,7 @@ type CartService struct {
 	DB *gorm.DB
 }
 
+
 func (crt CartService) Add(c *gin.Context) {
 	login, err := c.Cookie("login")
 	if err != nil {
@@ -25,8 +26,10 @@ func (crt CartService) Add(c *gin.Context) {
 		c.Redirect(302, "/regist")
 		return
 	}
+
 	var user models.User
 	if err := crt.DB.Where("login = ? and password = ?", login, password).First(&user).Error; err != nil {
+		// Создаем запрос, First - первая запись
 		c.String(500, fmt.Sprintf("Не удалось создать корзину: %v", err))
 		return
 	}
@@ -34,6 +37,7 @@ func (crt CartService) Add(c *gin.Context) {
 	tovar := c.PostForm("tovar")
 	priceS := c.PostForm("price")
 	price, err := strconv.ParseFloat(priceS, 64)
+	// strconv - парсим строку, из строки в цифры
 	if err != nil {
 		c.String(401, "Неверный формат цены")
 		return
@@ -42,10 +46,12 @@ func (crt CartService) Add(c *gin.Context) {
 	var cart models.Cart
 	if err := crt.DB.Where("user_id = ?", user.ID).First(&cart).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
+		// Проверяем на наличие корзины
 			cart = models.Cart{UserID: user.ID}
 			if err := crt.DB.Create(&cart).Error; err != nil {
 				c.String(500, fmt.Sprintf("Не удалось создать корзину: %v", err))
 				return
+			// Создаем корзину
 			}
 		} else {
 			c.String(500, fmt.Sprintf("Ошибка базы данных: %v", err))

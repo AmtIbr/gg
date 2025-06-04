@@ -31,6 +31,7 @@ func (u UserService) Registration(c *gin.Context) {
 
 	c.SetCookie("login", login, 1200, "/", "localhost", false, false)
 	c.SetCookie("password", password, 1200, "/", "localhost", false, false)
+	// Куки - данные, которые отсылаем сервером на браузер. Путь, домен на котором работает печеньки, секьюр и httponly для https 
 
 	c.Redirect(302, "/catalog")
 }
@@ -57,6 +58,8 @@ func (u UserService) Agreement(c *gin.Context) {
 	name := c.PostForm("name")
 
 	redirectURL := fmt.Sprintf("/agreement?login=%s&password=%s&name=%s", login, password, name)
+	// ? для параметров. На ссылке страницы агримент видно
+	
 
 	c.Redirect(302, redirectURL)
 }

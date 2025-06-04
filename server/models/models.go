@@ -13,14 +13,14 @@ type User struct {
 type Cart struct {
 	gorm.Model
 	UserID   uint
-	Value    float64   // общая стоимость (можно пересчитывать в хуке AfterSave)
-	Products []Product `gorm:"foreignKey:CartID"` // Cart.ID → Product.CartID
+	Value    float64   // общая стоимость
+	Products []Product `gorm:"foreignKey:CartID"` // Cart.ID → Product.CartID карт ИД это ид корзины
 }
 
 type Product struct {
 	gorm.Model
 	CartID uint // внешний ключ
-	Cart   Cart `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // optional: поведение FK
+	Cart   Cart `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // optional: поведение FK  При обновлении корзины обновляем и продукты, при удалении корзины это поле noll
 	Tovar  string
 	Price  float64
 }

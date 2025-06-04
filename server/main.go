@@ -12,17 +12,22 @@ import (
 
 func main() {
 
-	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{}) 
+	// Подключение к базе данных
 
 	if err != nil {
 		panic("failed to connect database")
 	}
+	// Проверяем подключение к БД
 
 	db.AutoMigrate(&models.User{}, &models.Cart{}, &models.Forum{}, &models.Product{})
+	// Создание в БД таблички
 
 	r := gin.Default()
+	// Инициализируем веб сервер
 
 	htmlService := service.HtmlService{DB: db}
+	// Создаем htmlservice с подключением к бд
 	userService := service.UserService{DB: db}
 	cartService := service.CartService{DB: db}
 	forumService := service.ForumService{DB: db}
