@@ -7,17 +7,32 @@
 <body>
   <section class="DULO">
     <nav>
-      <a href="index.html"><img src='D:\Edufold\Images\Logo.png'></a>
+      <a href="index.html"><img src='https://sun9-49.userapi.com/impg/5z-IEHkqirdOHTZW8rUokSImA1xxA77wyB9OZA/S9bLBHnwmg8.jpg?size=1024x1024&quality=95&sign=06ff92f0410008dcce66199393a66ac3&type=album'></a>
       <div class="nav-links">
         <ul>
-          <li><a href="index.html">Домашняя</a></li>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="">Каталог</a></li>
-          <li><a href="">Форум</a></li>
-          <li><a href="">Контакты</a></li>
+          <li><a href="/home">Домашняя</a></li>
+          <li><a href="/about">О нас</a></li>
+          <li><a href="/catalog">Каталог</a></li>
+          <li><a href="/pereputie">Форум</a></li>
+          <li><a href="/message">Контакты</a></li>
         </ul>
       </div>
-    </nav>
+        <div class="nav-icons">
+    <a href="/login" class="nav-icon" title="Войти">
+      <svg width="26" height="26" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 20c0-4 8-4 8-4s8 0 8 4"/>
+      </svg>
+    </a>
+    <a href="/cart" class="nav-icon" title="Корзина">
+      <svg width="26" height="26" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="9" cy="21" r="1"/>
+        <circle cx="19" cy="21" r="1"/>
+        <path d="M1 1h2l3.6 7.59a2 2 0 0 0 1.7 1.11h9.72a2 2 0 0 0 1.69-1l3.24-5.73A1 1 0 0 0 21.42 2H6"/>
+      </svg>
+    </a>
+  </div>
+</nav>
     <h1>Каталог</h1>
     </section>
 
@@ -34,19 +49,19 @@
 
       <form class="card" action="/cart/add" method="post">
         <div class="image-slider">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2455253168-1.jpg">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2455252855-1.jpg">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2455252946-1.jpg">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2455253030-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-arhitektora-shcuseva-ulica-2475041966-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-arhitektora-shcuseva-ulica-2475042058-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-arhitektora-shcuseva-ulica-2475041945-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-arhitektora-shcuseva-ulica-2475042088-1.jpg">
         </div>
         <div class="content">
-          <h3>2-комн. квартира, 46 м² в ЖК «ЗИЛАРТ»</h3>
+          <a href="/tovar1"><h3>2-комн. квартира, 46 м² в ЖК «ЗИЛАРТ»</h3></a>
           <p class="description">Общая площадь 46 м² <br> Площадь кухни 21 м² <br> Этаж 9 из 40 <br> Год постройки 2023</p>
           <p class="price">32 580 000 ₽</p>
            <input type="hidden" name="product_id" value="1">
-           <input type="hidden" name="tovar" value="ЗИЛАРТ">
+           <input type="hidden" name="tovar" value="2-комн. квартира, 46 м² в ЖК «ЗИЛАРТ»">
            <input type="hidden" name="price" value="32580000">
-          <input type="submit" value="buy" />
+          <input type="submit" value="в корзину" />
         </div>
       </form>
 
@@ -58,12 +73,13 @@
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2462914698-1.jpg">
         </div>
         <div class="content">
-          <h3>1-комн. квартира, 35,7 м² в ЖК «ЗИЛАРТ»</h3>
+          <a href="/tovar2"><h3>1-комн. квартира, 35,7 м² в ЖК «ЗИЛАРТ»</h3></a>
           <p class="description">Общая площадь 35,7 м² <br> Площадь кухни 10 м² <br> Этаж 10 из 15 <br> Год постройки 2023</p>
           <p class="price">19 200 000 ₽</p>
            <input type="hidden" name="product_id" value="2">
+           <input type="hidden" name="tovar" value="1-комн. квартира, 35,7 м² в ЖК «ЗИЛАРТ»">
            <input type="hidden" name="price" value="19200000">
-          <input type="submit" value="buy" />
+          <input type="submit" value="в корзину" />
         </div>
        </form>
 
@@ -75,16 +91,17 @@
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2468933038-1.jpg">
         </div>
         <div class="content">
-          <h3>1-комн. квартира, 40,49 м² в ЖК «ЗИЛАРТ»</h3>
+          <a href="/tovar3"><h3>1-комн. квартира, 40,49 м² в ЖК «ЗИЛАРТ»</h3></a>
           <p class="description">Общая площадь 40,49 м² <br> Площадь кухни 20 м² <br> Этаж 6 из 40 <br> Год постройки 2023</p>
           <p class="price">21 500 000 ₽</p>
            <input type="hidden" name="product_id" value="3">
+           <input type="hidden" name="tovar" value="1-комн. квартира, 40,49 м² в ЖК «ЗИЛАРТ»">
            <input type="hidden" name="price" value="21500000">
-          <input type="submit" value="buy" />
+          <input type="submit" value="в корзину" />
         </div>
        </form>
 
-    <div class="card">
+    <form class="card" action="/cart/add" method="post">
         <div class="image-slider">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2474804811-1.jpg">
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2474808522-1.jpg">
@@ -92,27 +109,33 @@
         <img src="https://images.cdn-cian.ru/images/kvartira-moskva-bratev-vesninyh-bulvar-2474804568-1.jpg">
         </div>
         <div class="content">
-          <h3>2-комн. квартира, 59,69 м² в ЖК «ЗИЛАРТ»</h3>
+          <a href="/tovar4"><h3>2-комн. квартира, 59,69 м² в ЖК «ЗИЛАРТ»</h3></a>
           <p class="description">Общая площадь 59,69 м² <br> Площадь кухни 20 м² <br> Этаж 28 из 40 <br> Год постройки 2023</p>
           <p class="price">28 500 000 ₽</p>
-          <a href="#" class="btn">Купить</a>
+          <input type="hidden" name="product_id" value="4">
+           <input type="hidden" name="tovar" value="2-комн. квартира, 59,69 м² в ЖК «ЗИЛАРТ»">
+           <input type="hidden" name="price" value="28500000">
+          <input type="submit" value="в корзину" />
         </div>
-      </div>
+      </form>
 
-   <div class="card">
+   <form class="card" action="/cart/add" method="post">
         <div class="image-slider">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2488178570-1.jpg">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2488187184-1.jpg">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2488187212-1.jpg">
-        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-rodchenko-ulica-2488187167-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-marka-shagala-naberezhnaya-2487154749-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-marka-shagala-naberezhnaya-2487150920-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-marka-shagala-naberezhnaya-2487154752-1.jpg">
+        <img src="https://images.cdn-cian.ru/images/kvartira-moskva-marka-shagala-naberezhnaya-2487154747-1.jpg">
         </div>
         <div class="content">
-          <h3>2-комн. квартира, 43 м² в ЖК «ЗИЛАРТ»</h3>
+          <a href="/tovar5"><h3>2-комн. квартира, 43 м² в ЖК «ЗИЛАРТ»</h3></a>
           <p class="description">Общая площадь 43 м² <br> Площадь кухни 20 м² <br> Этаж 7 из 9 <br> Год постройки 2024</p>
           <p class="price">28 499 000 ₽</p>
-          <a href="#" class="btn">Купить</a>
+          <input type="hidden" name="product_id" value="5">
+           <input type="hidden" name="tovar" value="2-комн. квартира, 43 м² в ЖК «ЗИЛАРТ»">
+           <input type="hidden" name="price" value="28499000">
+          <input type="submit" value="в корзину" />
         </div>
-      </div>
+      </form>
 
       <div class="card">
         <div class="image-slider">

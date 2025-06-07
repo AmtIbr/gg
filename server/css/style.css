@@ -1,15 +1,128 @@
-.DULO{
-    height: 50vh;
+.Dora{display: flex;
+  justify-content: center; 
+  align-items: center;   
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;}
+  .Dora div{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .Dora div h1{
+     margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  }
+  .Dora-dura{
+    width: 200px;
+  padding: 10px 0;
+  margin: 8px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  background-color: #f3c877;
+  color: #fff;
+  }
+
+
+
+
+
+.SlavaMarlow{
+     background: #1976d2;
+      color: #fff;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 20px;
+      cursor: pointer;
+}
+
+.IGotLove{
+            background: linear-gradient(120deg, #b5d0e2 0%, #eeceda 50%, #fde993 100%);
+        }
+.IGotLove section{
+            background-color: white;
+            max-width: 850px;
+            margin: 40px auto 40px auto;
+            border-radius: 30px;
+            padding: 36px 38px 46px 38px;
+        }
+        
+.IGotLove h1{
+            font-family: sans-serif ;
+            text-align: center;
+            font-size: 45px;
+            margin: 0 0 12px 0;
+            color: #ea6a47;
+        }
+
+.IGotLove p{
+            text-indent: 30px;
+            font-size: 20px;
+            background: linear-gradient(90deg, #fff 70%, #ffe8b6 100%);
+            border-left: 7px solid #f9d29d;
+            padding: 10px 20px 10px 18px;
+            border-radius: 11px;
+        }
+.IGotLove h2{
+            font-family: sans-serif;
+            font-size: 25px;
+            color: #f18736;
+            margin-top: 40px;
+            margin-bottom: 14px;
+            background: #f8eacf;
+            border-radius: 10px;
+            padding: 8px 0 8px 22px;
+        }
+.IGotLove ul{
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+.IGotLove ul li{
+            margin-bottom: 0.75em;
+            display: flex;
+            padding-left: 10px;
+            border-left: 5px solid #93c28f;
+            border-radius: 4px;
+            background: #ebfce3;
+        }
+.IGotLove img{
+            width:100%;
+            height:100%;
+            border-radius: 30px;
+        }
+
+.KAIF{
+        background: url("https://phoneky.co.uk/thumbs/screensavers/down/cartoon-anime/happayonio_zs9rmbk2.gif");
+    }
+.KAIF h2{
+        text-align: center;
+        font-size: 20px;
+        color: antiquewhite;
+        font-family: Stalinist One ;
+    }
+.KAIF table{
+        margin-left: auto; margin-right: auto; text-align: center; font-size: 25px; font-family: "Rubik Glitch"; border:50px; background-color:#58c63d;
+    }
+
+/*--------------Сайт------------*/
+/* Сброс отступов и полей */
+*{
+    margin: 0;
+    padding: 0;
+}
+.Cadillac{
+    min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7)), url(https://ru.arabianbusiness.com/wp-content/uploads/sites/5/cloud/2023/11/13/Dubai-construction.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(https://cdn.tripster.ru/photos/5458fe96-f692-4a73-906e-f15839d4d6a2.jpg);
     background-position: center;
     background-size: cover;
-    text-align: center;
-    color: #fff;
+    position: relative;
 }
-.DULO h1{
-    margin-top: 100px;
-}
+/* Навигация */
 nav{
     display: flex;
     padding: 2% 6%;
@@ -47,6 +160,455 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 18px;
+}
+.nav-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.15s;
+}
+.nav-icon:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+.nav-icon svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+  stroke: #fff;
+}
+
+/*--------------Сайт Главная------------*/
+.dinero{
+    width: 55%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.dinero h1{
+    font-size: 52px;
+}
+.dinero p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/*--------------Кнопка------------*/
+.watafuk{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 18px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.watafuk:hover{
+    border: 1px solid #e9bf66;
+    background: #e9bf66;
+    transition: 1s;
+}
+/*--------------Кнопка------------*/
+
+.MnePoh{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+p{
+    color: #474747;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.El-Problema{
+    flex-basis: 31%;
+    background: #eee1cf;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.El-Problema:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.sheikh{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.CristalMoet{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.CristalMoet img{
+    width: 100%;
+    height: 400px;
+}
+.NewMerin{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.NewMerin:hover{
+    background: rgba(245, 203, 154, 0.7);
+}
+.NewMerin h3{
+    width: 100%;
+    font-weight: 500;
+    color: #000000;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.NewMerin:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.Leck{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.HUBLOT{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.HUBLOT img{
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.HUBLOT p{
+    padding: 0;
+}
+.HUBLOT h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.BUGATTI{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7)), url(https://burobiz-a.akamaihd.net/uploads/images/61243/large_1-9.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 150px 0;
+}
+.BUGATTI h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+/*--------------Закончили Сайт Главная------------*/
+
+
+
+
+
+/*--------------Сайт О нас------------*/
+.DULO{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7)), url(https://ru.arabianbusiness.com/wp-content/uploads/sites/5/cloud/2023/11/13/Dubai-construction.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.DULO h1{
+    margin-top: 100px;
+}
+.SHOW-ab{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.ICE-ab{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.ICE-ab img{
+    width: 100%;
+}
+.ICE-ab h1{
+    padding-top: 0;
+}
+.ICE-ab p{
+    padding: 15px 0 25px;
+}
+.ICE-ab h2{
+    padding: 5px 0 25px;
+}
+.Aristocrat{
+    display: inline-block;
+    text-decoration: none;
+    color: #ebdb84;
+    border: 1px solid #f3e596;
+    padding: 12px 34px;
+    font-size: 18px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.Aristocrat:hover{
+     border: 1px solid #000000;
+    background: #fcefc7;
+    transition: 1s;
+}
+/*--------------Закончили Сайт О нас------------*/
+
+
+
+
+
+/*--------------Сайт Контакты------------*/
+.LostLove{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.LostLove iframe{
+    width: 100%;
+}
+.pablo{
+    width: 80%;
+    margin: auto;
+}
+.lollipop{
+    flex-basis: 48%;
+    margin-bottom: 15px;
+}
+.lollipop div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.lollipop div p{
+    padding: 0;
+}
+.lollipop div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #313131;
+    font-weight: 400;
+}
+.lollipop input, .lollipop textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+/*-------------- Отправка писем через Сайт Контакты------------*/
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #007BFF;
+  }
+  .form-group {
+    margin-bottom: 8px;
+  }
+  
+  .checkbox-group {
+    margin-bottom: 8px;
+  }
+  
+  .hero-btn {
+    margin-top: 8px;
+  }
+/*--------------Закончили Сайт Контакты------------*/
+
+/*--------------Сайт Форум------------*/
+.DOMOY{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7)), url(https://moscowcitysale.ru/.fast_background/1/10/def_105057a8a27cc3e584726d3f1d88869a2c015b5d_2_.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.DOMOY h1{
+    margin-top: 100px;
+}
+.forum {
+    max-width: 760px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.forum__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Форма */
+.form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    animation: fadeIn 0.6s ease;
+}
+
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #dcdfe6;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color .3s, box-shadow .3s;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    border-color: #5dade2;
+    box-shadow: 0 0 0 3px rgba(93,173,226,0.2);
+    outline: none;
+}
+
+
+/* Список сообщений */
+.messages__title {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.message {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    transition: transform .2s, box-shadow .2s;
+    animation: fadeInUp 0.6s ease;
+}
+
+.message:nth-child(even) {
+    background: #f9fafe;
+}
+
+.message:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.message__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.message__author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.message__time {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.message__body {
+    font-size: 1rem;
+    color: #2d2d2d;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.messages__empty {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+/*--------------Закончили Сайт Форум------------*/
+
+
+
+
     
 
 
@@ -178,25 +740,6 @@ nav img{
 
 
 
-.watafuk{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 18px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.watafuk:hover{
-    border: 1px solid #e9bf66;
-    background: #e9bf66;
-    transition: 1s;
-}
-
-
-
 
 
 
@@ -264,6 +807,50 @@ nav img{
             cursor: pointer;
         }
 
+
+
+.Baza {
+    display: flex;
+    gap: 30px;
+    width: 500px;
+    overflow: scroll;
+    }
+.SQWOZBAB{
+    padding: 30px;
+    min-width: 500px;
+}
+
+.TatarskiyBogatir {
+      width: 40%;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+.TatarskiyBogatir h1 {
+      margin-top: 0;
+      font-size: 2em;
+    }
+.TatarskiyBogatir p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+.Kazantip {
+      background: #4287f5;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+.Kazantip:hover {
+      background: #2a5dab;
+    }
 
 
 

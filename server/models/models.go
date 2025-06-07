@@ -14,13 +14,13 @@ type Cart struct {
 	gorm.Model
 	UserID   uint
 	Value    float64   // общая стоимость
-	Products []Product `gorm:"foreignKey:CartID"` // Cart.ID → Product.CartID карт ИД это ид корзины
+	Products []Product `gorm:"foreignKey:CartID"` // Cart.ID → Product.CartID
 }
 
 type Product struct {
 	gorm.Model
 	CartID uint // внешний ключ
-	Cart   Cart `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // optional: поведение FK  При обновлении корзины обновляем и продукты, при удалении корзины это поле noll
+	Cart   Cart `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // optional: поведение FK  При обновлении корзины обновляем и продукты, при удалении корзины это поле null
 	Tovar  string
 	Price  float64
 }
@@ -31,4 +31,11 @@ type Forum struct {
 	Title   string
 	Content string
 	Theme   string
+}
+
+type Message struct {
+	gorm.Model
+	Name    string
+	Email   string
+	Message string
 }
